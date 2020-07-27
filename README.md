@@ -2,17 +2,19 @@
 
 Feature Learning for Accelerometer based Gait Recognition
 
-Code repository of paper: Feature Learning for Accelerometer based Gait Recognition, submitted to ICANN 2020
+Code repository of paper: Feature Learning for Accelerometer based Gait Recognition, submitted to Journal
 
 
 ## Used datasets
-* [ZJU-GaitAcc] - http://www.ytzhang.net/datasets/zju-gaitacc/
-   * session 0 - 22 subjects
-   * session 1 - 153 subjects
-   * session2 - 153 subjects
+* Dataset used for evaluations
+   * [ZJU-GaitAcc] - http://www.ytzhang.net/datasets/zju-gaitacc/
+      * session 0 - 22 subjects
+      * session 1 - 153 subjects
+      * session2 - 153 subjects
    
-* [IDNet] - http://signet.dei.unipd.it/research/human-sensing/
-  * 50 subjects with various number of sessions
+* Dataset used for feature learning
+   *[IDNet] - http://signet.dei.unipd.it/research/human-sensing/
+      * 50 subjects with various number of sessions
 
 
 ## Segmentation
