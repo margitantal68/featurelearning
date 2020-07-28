@@ -2,9 +2,25 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-sns.set(style="darkgrid")
+
+from plot_utils import set_style
+
+# df - dataframe
+# title - figure title
+def mylineplot( df, title):
+    plt.title(title)
+    ax = sns.lineplot(x="numframes", y="vals", hue='cols', data=df)
+    plt.xlabel('Number of aggregated frames')
+    plt.ylabel('EER')
+    plt.ylim(0, 0.5)
+    plt.xticks(np.arange(1, 6, step=1))
+    plt.show()
 
 
+
+# 
+# Run from project root directory: python plots/lineplots.py
+# 
 
 eer_raw_s1=[0.41, 0.4, 0.4, 0.4, 0.4]
 eer_raw_s2=[0.38, 0.38, 0.38, 0.37, 0.37]
@@ -35,14 +51,10 @@ df_cd  = pd.DataFrame(data=d_cd )
 df_cd = df_cd.melt('numframes', var_name='cols',  value_name='vals')
 
 
-g = sns.catplot(x="numframes", y="vals", hue='cols', data=df_s1, kind='point')
+sns.set(rc={'figure.figsize':(4.5, 4.5)})
+set_style()
 
-
-plt.title('Same day - session 1')
-# plt.title('Same day - session 2')
-# plt.title('Cross day')
-plt.xlabel('Number of aggregated frames')
-plt.ylabel('EER')
-axes = plt.gca()
-axes.set_ylim([0,0.5])
-plt.show()
+mylineplot( df_s1, 'Same day - session 1')
+mylineplot( df_s2, 'Same day - session 2')
+mylineplot( df_cd, 'Cross day ')
+    
