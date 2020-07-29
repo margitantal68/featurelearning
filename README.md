@@ -15,6 +15,7 @@ Code repository of paper: Feature Learning for Accelerometer based Gait Recognit
 * Dataset used for feature learning
    *[IDNet] - http://signet.dei.unipd.it/research/human-sensing/
       * 50 subjects with various number of sessions
+      * Resampled at 100 Hz
 
 
 ## Segmentation
@@ -45,7 +46,6 @@ Code repository of paper: Feature Learning for Accelerometer based Gait Recognit
     * augment_data.py - functions used for data augmentation
     * autoencoder.py - code for training and evaluating autoencoders
     * classification.py - code for user identification (classification)
-    * load_data.py - various data loading and reshaping
     * fcn.py - Fully Convolutional end-to-end model
     * model.py - code for training the end-to-end model
     * normalization.py - functions for data normalization
